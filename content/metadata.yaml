@@ -1,5 +1,5 @@
 ---
-title: "Manuscript Title"
+title: "Sgkit is awesome"
 date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
   - markdown
@@ -7,12 +7,12 @@ keywords:
   - manubot
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
+  - github: Tom White
+    name: Tom White
+    initials: TW
     orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+    twitter: tom_e_white
+    email: tom.e.white@gmail.com
     affiliations:
       - Department of Something, University of Whatever
     funders:
