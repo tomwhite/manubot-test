@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/tomwhite/manubot-test/tree/gh-pages) branch hosts the contents of this directory at <https://tomwhite.github.io/manubot-test/>.
-The permalink for this webpage version is <https://tomwhite.github.io/manubot-test/v/efef9ced5901536f73af3bc2d3fb3b27010943da/>.
+The permalink for this webpage version is <https://tomwhite.github.io/manubot-test/v/aa933ae5e52d1d687e235084c1440d3a29cc2b83/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://tomwhite.github.io/manubot-test/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`efef9ced5901536f73af3bc2d3fb3b27010943da`](https://github.com/tomwhite/manubot-test/commit/efef9ced5901536f73af3bc2d3fb3b27010943da).
+[`aa933ae5e52d1d687e235084c1440d3a29cc2b83`](https://github.com/tomwhite/manubot-test/commit/aa933ae5e52d1d687e235084c1440d3a29cc2b83).
