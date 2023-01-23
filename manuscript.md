@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2023-01-23" />
   <meta name="citation_publication_date" content="2023-01-23" />
   <meta property="article:published_time" content="2023-01-23" />
-  <meta name="dc.modified" content="2023-01-23T16:15:27+00:00" />
-  <meta property="article:modified_time" content="2023-01-23T16:15:27+00:00" />
+  <meta name="dc.modified" content="2023-01-23T17:21:51+00:00" />
+  <meta property="article:modified_time" content="2023-01-23T17:21:51+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://tomwhite.github.io/manubot-test/" />
   <meta name="citation_pdf_url" content="https://tomwhite.github.io/manubot-test/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://tomwhite.github.io/manubot-test/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://tomwhite.github.io/manubot-test/v/efef9ced5901536f73af3bc2d3fb3b27010943da/" />
-  <meta name="manubot_html_url_versioned" content="https://tomwhite.github.io/manubot-test/v/efef9ced5901536f73af3bc2d3fb3b27010943da/" />
-  <meta name="manubot_pdf_url_versioned" content="https://tomwhite.github.io/manubot-test/v/efef9ced5901536f73af3bc2d3fb3b27010943da/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://tomwhite.github.io/manubot-test/v/aa933ae5e52d1d687e235084c1440d3a29cc2b83/" />
+  <meta name="manubot_html_url_versioned" content="https://tomwhite.github.io/manubot-test/v/aa933ae5e52d1d687e235084c1440d3a29cc2b83/" />
+  <meta name="manubot_pdf_url_versioned" content="https://tomwhite.github.io/manubot-test/v/aa933ae5e52d1d687e235084c1440d3a29cc2b83/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,9 +69,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://tomwhite.github.io/manubot-test/v/efef9ced5901536f73af3bc2d3fb3b27010943da/))
+([permalink](https://tomwhite.github.io/manubot-test/v/aa933ae5e52d1d687e235084c1440d3a29cc2b83/))
 was automatically generated
-from [tomwhite/manubot-test@efef9ce](https://github.com/tomwhite/manubot-test/tree/efef9ced5901536f73af3bc2d3fb3b27010943da)
+from [tomwhite/manubot-test@aa933ae](https://github.com/tomwhite/manubot-test/tree/aa933ae5e52d1d687e235084c1440d3a29cc2b83)
 on January 23, 2023.
 </em></small>
 
@@ -120,6 +120,26 @@ Jane Roe \<jane.roe@whatever.edu\>.
 
 
 
+
+## Popgen
+
+### Audience
+
+[TODO]
+
+### Overview of sgkit's API methods
+
+Sgkit provides a number of methods for computing statistics in population genetics. Before running the methods, the dataset is usually divided into windows along the genome, using the `window_by_*` functions, which tell sgkit to produce per-window statistics. For example, `window_by_position` creates windows that are a fixed number of base pairs, while `window_by_interval` creates windows corresponding to arbitrary user-defined intervals.
+
+It's common in population genetics to group samples into populations, which in sgkit are referred to as _cohorts_. There are two types of statistics: one-way statistics where there is a single statistic for each cohort, and multi-way statistics where there is a statistic between each pair, triple, etc of cohorts. [TODO: do we need to say how cohorts are defined?]
+
+The methods for one-way statistics include `diversity` for computing mean genetic diversity, `Tajimas_D` for computing Tajima’s D, and `Garud_H` for computing the H1, H12, H123 and H2/H1 statistics defined in [@doi:10.1371/journal.pgen.1005004].
+
+The methods for multi-way statistics include `divergence` and `Fst` for computing mean genetic divergence and F[ST] (respectively) between pairs of cohorts, and `pbs` for computing the population branching statistic between cohort triples.
+
+### Example
+
+We converted phased Ag1000G hypotype data in Zarr format [@https://www.malariagen.net/data/ag1000g-phase-2-ar1] to sgkit's Zarr format using the `read_scikit_allel_vcfzarr` function. The data contained 1,164 samples at 39,604,636 sites, and was [TODO] MB on disk before conversion, and Y MB after conversion to sgkit's Zarr format. Data for the X chromosome was discarded since it was not available for all samples. The conversion took [TODO] minutes Y seconds, including a postprocessing `rechunk` step to ensure that the data was suitably chunked for the subsequent analysis.
 
 ## References {.page_break_before}
 
